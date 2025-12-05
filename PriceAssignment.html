@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: nowrap; /* Keeps them on a single line */
+            justify-content: center;
+            gap: 2%; 
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .card {
+            background-color: #e5e7eb;
+            border-radius: 8px;
+            padding: 40px 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 0; /* vital for allowing flex items to shrink below content size */
+            max-width: 350px;
+        }
+
+        .plan-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .price-container {
+            font-size: 2.25rem;
+            font-weight: 900;
+            margin-bottom: 24px;
+        }
+
+        .price-period {
+            font-size: inherit;
+            font-weight: 700;
+            color: #374151;
+        }
+
+        .features-list {
+            padding: 0;
+            margin: 0 0 32px 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.875rem;
+            font-weight: 700;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .check-icon-box {
+            background-color: #16a34a; 
+            border-radius: 2px;
+            width: 16px;
+            height: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .check-icon-box i {
+            color: white;
+            font-size: 10px;
+        }
+
+        .ban-icon {
+            color: #ef4444; 
+            font-size: 14px;
+            width: 16px;
+            text-align: center;
+        }
+
+        /* Buttons */
+        .btn-signup {
+            background-color: #ef4444; 
+            color: white;
+            font-size: 0.875rem;
+            font-weight: 700;
+            padding: 10px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: auto;
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .container {
+                gap: 10px;
+            }
+            .card {
+                padding: 20px 10px;
+            }
+            .price-container {
+                font-size: 1.5rem;
+            }
+            .plan-title {
+                font-size: 1rem;
+            }
+            .features-list {
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="card">
+            <h2 class="plan-title">Basic</h2>
+            
+            <div class="price-container">
+                $11.99/month
+            </div>
+            
+            <ul class="features-list">
+                <li class="feature-item">
+                    <div class="check-icon-box">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    10GB Storage
+                </li>
+                <li class="feature-item">
+                    <div class="check-icon-box">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    1 User
+                </li>
+                <li class="feature-item disabled">
+                    <i class="fas fa-ban ban-icon"></i>
+                    Support
+                </li>
+            </ul>
+
+            <button class="btn-signup">Sign Up</button>
+        </div>
+
+        <div class="card">
+            <h2 class="plan-title">Standard</h2>
+            
+            <div class="price-container">
+                $19.99/month
+            </div>
+            
+            <ul class="features-list">
+                <li class="feature-item">
+                    <div class="check-icon-box">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    50GB Storage
+                </li>
+                <li class="feature-item">
+                    <div class="check-icon-box">
+                        <i class="fas fa-check"></i>
+                    </div>
+                   5 Users
+                </li>
+                <li class="feature-item">
+                    <div class="check-icon-box">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    Phone & Email Support
+                </li>
+            </ul>
+
+            <button class="btn-signup">Sign Up</button>
+        </div>
+
+        <!-- PREMIUM PLAN -->
+        <div class="card">
+            <h2 class="plan-title">Premium</h2>
+            
+            <div class="price-container">
+                $49.99/month
+            </div>
+            
+            <ul class="features-list">
+                <li class="feature-item">
+                    <div class="check-icon-box">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    100GB Storage
+                </li>
+                <li class="feature-item">
+                    <div class="check-icon-box">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    10 Users
+                </li>
+                <li class="feature-item">
+                    <div class="check-icon-box">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    24/7 Support
+                </li>
+            </ul>
+
+            <button class="btn-signup">Sign Up</button>
+        </div>
+
+    </div>
+
+</body>
+</html>
